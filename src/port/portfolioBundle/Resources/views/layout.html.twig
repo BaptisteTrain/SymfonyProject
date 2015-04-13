@@ -1,0 +1,52 @@
+{# src/port/portfolioBundle/Resources/views/layout.html.twig #}
+
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Portfolio
+{% endblock %}
+
+{% block style %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap/css/bootstrap.css') }}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ asset('bundles/portportfolio/css/myCSS.css') }}" type="text/css" />
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div id="header" class="label fix">
+      <h2 id="sujet">Portfolio</h2>
+    </div>
+    <!-- Barre de navigation -->
+      <div class="navbar navbar-inverse fix">
+        <div class="navbar-inner">
+          <!-- Bouton apparaissant sur les rÃ©solutions mobiles afin de faire apparaÃ®tre le menu de navigation -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <!-- Structure du menu -->
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="{{ path('portportfolio_homepage') }}">Accueil</a></li>
+              <li><a href="{{ path('portportfolio_projets') }}">Projets</a></li>
+              <li><a href="{{ path('portportfolio_idées') }}">Idées</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+		
+    {% block information %}
+    {% endblock %}
+	
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script src="bootstrap/js/jquery-1.8.3.min.js"></script>
+    <!-- IntÃ©gration de la libraire de composants du Bootstrap -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+{% endblock %}

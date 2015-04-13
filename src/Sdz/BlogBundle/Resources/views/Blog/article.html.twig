@@ -1,0 +1,18 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/article.html.twig #}
+
+{% set acceuil = acceuil|default(false) %}
+
+<h2>
+  {# Si on est sur la page d'acceuil, le titre est un lien vers l'article, sinon non #}
+  {% if acceuil %}
+    <a href="{{ path('sdzblog_voir', {'id': article.id} ) }}">{{ article.titre }}</a>
+  {% else %}
+    {{ article.titre }}
+  {% endif %}
+</h2>
+
+<i>Le {{ article.dateEdition|date('d/m/Y') }}, par {{ article.auteur }}.</i>
+
+<div class="well">
+  {{ article.contenu }}
+</div>

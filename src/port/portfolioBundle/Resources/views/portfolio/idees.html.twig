@@ -1,0 +1,27 @@
+{# src/port/portfolioBundle/Resources/views/portfolio/idées.html.twig #}
+
+{% extends "portportfolioBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Idées
+{% endblock %}
+
+{% block information %}
+	<div id="projets">
+		<div id="fac" class="projetsBlock">
+			<h3>
+				Mes futurs idées:
+			</h3>
+			{% for p in idee %}
+       			<div>
+       				<p class="projetsTitre"> {{ p.titre }}: </p>
+       				<i> {{ p.date }} </i>
+       				<p class="well">  {{ p.contenu }} </p>
+       			</div>
+       			<hr />
+       		{% else %}
+				<p class="well"> {{ tailleIdee }} </p>
+      		{% endfor %}
+		</div>
+	</div>
+{% endblock %}

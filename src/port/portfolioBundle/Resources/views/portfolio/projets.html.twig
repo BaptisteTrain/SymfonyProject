@@ -1,0 +1,42 @@
+{# src/port/portfolioBundle/Resources/views/portfolio/projets.html.twig #}
+
+{% extends "portportfolioBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Projets
+{% endblock %}
+
+{% block information %}
+	<div id="projets">
+		<div id="fac" class="projetsBlock">
+			<h3>
+				Mes projets réalisé dans le cadre de l'universitée:
+			</h3>
+			{% for p in fac %}
+       			<div>
+       				<p class="projetsTitre"> {{ p.titre }}: </p>
+       				<i> {{ p.date }} </i>
+       				<p class="well">  {{ p.contenu }} </p>
+       			</div>
+       			<hr />
+       		{% else %}
+				<p class="well"> {{ tailleFac }} </p>
+      		{% endfor %}
+		</div>
+		<div id="personel" class="projetsBlock">
+			<h3>
+				Mes projets réalisé dans le cadre personel:
+			</h3>
+			{% for p in perso %}
+       			<div>
+       				<p class="projetsTitre"> {{ p.titre }}: </p>
+       				<i> {{ p.date }} </i>
+       				<p class="well">  {{ p.contenu }} </p>
+       			</div>
+       			<hr />
+       		{% else %}
+				<p class="well"> {{ taillePerso }} </p>
+      		{% endfor %}
+		</div>
+	</div>
+{% endblock %}

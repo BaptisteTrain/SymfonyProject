@@ -1,0 +1,15 @@
+portportfolio_homepage:
+    pattern:  /port
+    defaults: { _controller: portportfolioBundle:Default:acceuil }
+
+portportfolio_projets:
+    pattern:  /port/projets
+    defaults: { _controller: portportfolioBundle:Default:projets }
+
+portportfolio_telechargementCvPdf:
+    pattern: /telechargementCvPdf 
+    defaults: { _controller: portportfolioBundle:Default:telechargementCvPdf }
+
+portportfolio_idées:
+    pattern: /idées 
+    defaults: { _controller: portportfolioBundle:Default:Idee }

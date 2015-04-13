@@ -1,0 +1,29 @@
+# src/Sdz/BlogBundle/config/Resources/routing.yml
+
+sdzblog_acceuil:
+    path:      /{page}
+    defaults:  { _controller: SdzBlogBundle:Blog:index, page: 1 }
+    requirements:
+        page: \d*
+
+sdzblog_voir:
+    path:     /article/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:voir }
+
+sdzblog_ajouter:
+    path:      /ajouter
+    defaults:  { _controller: SdzBlogBundle:Blog:ajouter }
+    requirements:
+        page: \d*
+
+sdzblog_modifier:
+    path:      /modifier/{id}
+    defaults:  { _controller: SdzBlogBundle:Blog:modifier }
+    requirements:
+        page: \d*
+
+sdzblog_supprimer:
+    path:      /supprimer/{id}
+    defaults:  { _controller: SdzBlogBundle:Blog:supprimer }
+    requirements:
+        page: \d*

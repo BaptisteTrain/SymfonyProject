@@ -1,0 +1,29 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/ajouter.html.twig #}
+
+{% extends "SdzBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Ajout d'un billet
+{% endblock %}
+
+{% block sdzblog_body %}
+
+  <h2>Ajouter un billet</h2>
+
+  {% include "SdzBlogBundle:Blog:formulaire.html.twig" %}
+
+  <p>
+     Le titre doit avoir au minimun 5 lettres. <br>
+     Le contenu ne doit pas etre vide. <br>
+	 Toute répétition de plus de 3 adresse de site web ou e-mail est considéré comme spam. <br>
+	 Le nom de l'auteur doit contenir au minimun 2 lettres. <br>
+  </p>
+  
+  <p>
+    <a href="{{ path('sdzblog_acceuil') }}" class="btn">
+      <i class="icon-chevron-left"></i>
+      Retour a l'acceuil
+    </a>
+  </p>
+
+{% endblock %}

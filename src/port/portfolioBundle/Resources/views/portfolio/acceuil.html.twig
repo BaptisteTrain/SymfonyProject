@@ -1,0 +1,44 @@
+{# src/port/portfolioBundle/Resources/views/Default/layout.html.twig #}
+
+{% extends "portportfolioBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Acceuil
+{% endblock %}
+
+{% block information %}
+	<div id="acceuil">
+			<div class="row">
+		    	<div id="data" class="span12">
+							<img id="img" src="{{ asset('bundles/portportfolio/images/moi.jpeg') }}" alt="Error" class="informationBlock"/>
+							<div id="information" class="informationBlock">
+									<p> Train Baptiste </p>
+									<p> 91 Impasse Villehardouin </p>
+							</div>
+							<div id="contact" class="informationBlock">
+									<p> 06 71 16 44 03</p>
+									<p> baptiste.train@gmail.com</p>
+							</div>
+							<div id="other" class="informationBlock">
+									<a href="https://fr.linkedin.com/"> <img id="in" src="{{ asset('bundles/portportfolio/images/in.png') }}" alt="Error"/> </a>
+							</div>
+					</div>
+			</div>
+			<div class="row">
+					<div id="presentation" class="span9 presentBlock">
+							<p>
+									Actuellement étudiant en seconde année de master informatique à l'universitée des sciences de Montpellier, et titulaire d'une licence informatique, j'ai choisi la spécialité "Architectture et ingénierie du logiciel et du web".
+							</p>
+							<p>
+									Ce portfolio à pour vocation de vous présenter mon travail et mes futurs projets.
+							</p>
+					</div>
+					<div id="download" class="span2 presentBlock">
+							<p id="downloadText" class="downloadBlock">
+									Vous pouvez télécharger mon cv ici:
+							</p>
+							<a href="{{ path('portportfolio_telechargementCvPdf') }}">cv.pdf</a>
+					</div>
+			</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/formulaire.html.twig #}
+
+{# Ce fichier va seulement se contenter d'afficher les formulaires #}
+<div class="well">
+  <form method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <input type="submit" class="btn btn-primary" />
+  </form>
+</div>

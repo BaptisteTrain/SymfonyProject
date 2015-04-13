@@ -1,0 +1,28 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/voir.html.twig #}
+
+{% extends "SdzBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Lecture d'un billet
+{% endblock %}
+
+{% block sdzblog_body %}
+
+  {% include "SdzBlogBundle:Blog:article.html.twig" %}
+
+  <p>
+    <a href="{{ path('sdzblog_acceuil') }}" class="btn">
+      <i class="icon-chevron-left"></i>
+      Retour a l'acceuil
+    </a>
+    <a href="{{ path('sdzblog_modifier', {'id': article.id}) }}" class="btn">
+      <i class="icon-edit"></i>
+      Modifier le billet
+    </a>
+    <a href="{{ path('sdzblog_supprimer', {'id': article.id}) }}" class="btn">
+      <i class="icon-trash"></i>
+      Supprimer le billet
+    </a>
+  </p>
+
+{% endblock %}

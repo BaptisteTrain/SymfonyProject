@@ -1,0 +1,28 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/modifier.html.twig #}
+
+{% extends "SdzBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Modification d'un billet
+{% endblock %}
+
+{% block sdzblog_body %}
+
+  <h2>Modifier un billet</h2>
+
+  {% include "SdzBlogBundle:Blog:formulaire.html.twig" %}
+
+  <p>
+     Le titre doit avoir au minimun 5 lettres. <br>
+     Le contenu ne doit pas etre vide. <br>
+	 Toute répétition de plus de 3 adresse de site web ou e-mail est considéré comme spam. <br>
+  </p>
+
+  <p>
+    <a href="{{ path('sdzblog_voir', {'id': article.id}) }}" class="btn">
+      <i class="icon-chevron-left"></i>
+      Retour au billet
+    </a>
+  </p>
+
+{% endblock %}
